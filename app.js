@@ -28,10 +28,10 @@ app.use(session({
     is_logged_in: false
 }))
 
-const indexRouter = require('../../routes/indexRoute');
+const indexRouter = require('./routes/indexRoute');
 app.use('/', indexRouter);
 
-const usersRouter = require('../../routes/usersRoute');
+const usersRouter = require('./routes/usersRoute');
 app.use('/users', usersRouter)
 
 module.exports = app;
