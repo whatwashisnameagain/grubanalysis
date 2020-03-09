@@ -6,11 +6,11 @@ const express = require('express'),
 router.get('/signup', (req, res) => {
     res.render('template', {
         locals: {
-        title: 'User Sign Up',
-        session: req.session
+            title: 'Grubanalysis | Signup',
+            session: req.session
         },
         partials: {
-        partial: 'partial-signup'
+            partial: 'partial-signup'
         }
     });
 });
@@ -18,7 +18,7 @@ router.get('/signup', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('template', {
         locals: {
-            title: 'User Login',
+            title: 'Grubanalysis | Login',
             session: req.session
         },
         partials: {

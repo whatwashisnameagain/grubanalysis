@@ -26,6 +26,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* HEADER STYLES */
@@ -45,7 +46,8 @@ nav {
 }
 nav a {
   margin: 0 25px;
-  font-size: 1.5em;
+  font-size: 0.9em;
+  text-transform: uppercase;
 } nav a:hover {
   color: rgb(192, 0, 0);
   transition: 1s;
@@ -117,4 +119,65 @@ nav a {
   padding: 30px;
   background: rgba(0, 0, 0, 0.9);
   width: 80%;
+}
+
+.form-page {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  color: red;
+  align-items: center;
+  padding: 25px;
+  width: 500px;
+  margin: 10px 0px 25px 0px;
+} .form-page h1 {
+  font-size: 1em;
+  color: #fff;
+}.form-page label {
+  text-transform: uppercase;
+  font-size: 0.5em;
+  margin-top: 10px;
+  padding: 10px;
+  width: 350px;
+}.form-page input {
+  padding: 10px;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  width: 350px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  background: none;
+} .form-page input::placeholder {
+  font-size: 0.75em;
+  text-transform: uppercase;
+}.form-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} .form-page button {
+  outline: none;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 5px;
+  color: #222;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  margin: 50px 0 25px 0;
+  background-color: gold;
+  cursor: pointer;
+  opacity: 0.95;
+} .form-page button:hover {
+  transform: scale(0.99);
+  opacity: 1;
+} .form-page button:active {
+  transform: scale(0.97);
+  text-shadow: inset 5px 5px 5px #000;
+}
+
+.signup-tagline {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.5em;
 }

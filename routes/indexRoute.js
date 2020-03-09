@@ -6,10 +6,14 @@ var express = require('express'),
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-
-//List of all Restaurants
+//List all Restaurants
 const allData = await data.getAllData();
 
+const activeUser = req.session.is_logged_in
+
+activeUser === undefined || activeUser === false ? 
+  res.redirect('/users/login')
+  :
   res.render('template', {
     locals: {
       title: 'grubanalysis',
@@ -19,7 +23,7 @@ const allData = await data.getAllData();
     partials: {
       partial: 'partial-index'
     }
-  });
+  })
 });
 
 /* Get By Id */
