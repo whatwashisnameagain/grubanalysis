@@ -1,4 +1,4 @@
-<div class='container'>
+<div class='container '>
     <div class='restaurant-container'>
         <div class="restaurant-header">
             ${idData.map(restaurant => {
@@ -11,10 +11,11 @@
         <div class="review-form-wrapper">
             <form action="/" method="POST">
                 <input type="hidden" name="restaurant_id" value=${idData[0].id}>
-                <label>Title
+                <div class='review-title'>
+                    <label for="review_title">Title</label>
                     <input type="text" name="review_title" placeholder="Review Title" autocomplete="off"/>
-                </label>
-                <label>Stars
+                    
+                    <label for="stars">Stars</label>
                     <select name="review_stars">
                         <option>1</option>
                         <option>2</option>
@@ -22,20 +23,23 @@
                         <option>4</option>
                         <option>5</option>
                     </select>
-                </label>
-                <label>My Review
+                </div>
+                <div class="review-body">
+                    <label>My Review</label>
                     <textarea name="review_text" placeholder="My review of this restaurant..." autocomplete="off"></textarea>
-                </label>
-                <button type="submit">Save Review</button>
+                    <button type="submit">Save Review</button>
+                </div>
             </form>
         </div>
 
             ${reviewData.map(review => {
                 return `
-                <div class='review-body'>
-                    <h3>${review.title}</h3>
-                    <h5>${review.name} <span>${review.karma}</span></h5>
-                    <p>${review.review}</p>
+                <div class='review-list-wrapper'>
+                    <div class="review-list">
+                        <h3>${review.title}</h3>
+                        <h5>${review.name} <span>${review.karma}</span></h5>
+                        <p>${review.review}</p>
+                    </div>
                 </div>
                 `
             })}
