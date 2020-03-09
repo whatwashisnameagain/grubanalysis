@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="main-page">
+        ${allData.map(data =>{
+            return `<a href="${data.id}"><p>${data.name}</p></a>`;
+        }).join('')}
+    </div>
+</div>
