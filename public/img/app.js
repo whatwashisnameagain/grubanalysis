@@ -4,6 +4,7 @@ FileStore = require('session-file-store')(session);
 path = require('path'),
 cookieParser = require('cookie-parser'),
 logger = require('morgan'),
+favicon = require('serve-favicon');
 es6renderer = require('express-es6-template-engine');
 app = express();
 
@@ -12,6 +13,8 @@ app.engine('html', es6renderer);
 app.set('views', './views');
 app.set('view engine', 'html');
 
+
+app.use(favicon('./img/favicon.ico'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,10 +28,10 @@ app.use(session({
     is_logged_in: false
 }))
 
-const indexRouter = require('./routes/indexRoute');
+const indexRouter = require('../../routes/indexRoute');
 app.use('/', indexRouter);
 
-const usersRouter = require('./routes/usersRoute');
+const usersRouter = require('../../routes/usersRoute');
 app.use('/users', usersRouter)
 
 module.exports = app;

@@ -5,8 +5,8 @@
 }
 
 body {
-  font: 25px 'Shadows Into Light', cursive;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/restaurant.jpg);
+  font: 25px 'Abel', sans-serif;
+  background: linear-gradient( rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0.2) 75%), url(../img/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -66,7 +66,7 @@ nav a {
 }
 
 .main-page p {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.9);
   padding: 20px;
   cursor: pointer;
   margin: 10px;
@@ -75,9 +75,14 @@ nav a {
   text-align: center;
   opacity: 0.8;
   border-radius: 2px;
+  border: 1px solid transparent;
 } .main-page p:hover {
   opacity: 1;
   transition: 1s;
+  border: 1px solid gold;
+} .main-page p:active {
+  transform: scale(0.99);
+  transition: 0.5s;
 }
 
 /* Restaurant Page Styles*/
@@ -102,13 +107,14 @@ nav a {
   padding: 5px;
   margin: 5px;
 }.restaurant-header h2 {
-  color: gold;
+  font-family: 'Pacifico', cursive;
+  font-size: 1em;
+  font-weight: 100;
 }
 
 .review-form-wrapper {
   border-radius: 10px;
   padding: 30px;
-  color: gold;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.9);
   width: 80%;
 }
