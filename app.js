@@ -34,7 +34,4 @@ app.use('/', indexRouter);
 const usersRouter = require('./routes/usersRoute');
 app.use('/users', usersRouter)
 
-const authorRouter = require('./routes/authorRoute');
-app.use('/author', authorRouter);
-
 module.exports = app;

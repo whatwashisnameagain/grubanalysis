@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 
 body {
   font: 25px 'Abel', sans-serif;
@@ -295,3 +299,4 @@ nav a {
   color: red;
   transition: 1s;
 }
+

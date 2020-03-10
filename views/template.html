@@ -10,19 +10,18 @@
     <title>${title}</title>
 </head>
 <body>
-    <div class="bg-image"></div>
-    <header>
-        <div class="brand">
-            <a href="/"><h1 class='title'>grubanalysis</h1></a>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <a href="/"><h1 class='title'>grubanalysis</h1></a>
+            </div>
+            <nav>
+                ${(!!session.is_logged_in) ? `<a href='/users/logout'>Logout ${session.first_name}</a>` : ''}
+            </nav>   
+        </header>
+        <div class="wrapper">
+            ${partial}
         </div>
-        <nav>
-            <a href='/author/about'>About</a>
-            ${(!!session.is_logged_in) ? `<a href='/users/logout'>Logout</a>` : ''
-            }
-        </nav>   
-    </header>
-    <div class="wrapper">
-        ${partial}
     </div>
 </body>
 </html>
