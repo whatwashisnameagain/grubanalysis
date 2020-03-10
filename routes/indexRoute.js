@@ -53,11 +53,13 @@ reviewData = await data.getAllReviews(id);
 router.post('/', (req,res) => {
   const { restaurant_id, review_title, review_stars,review_text} = req.body;
 
-  
+  { user_id } = req.session;
+
+  console.log('USER ID IS ME', user_id);
 
   console.log(req.body)
 
-  data.addReview(restaurant_id, review_stars, review_title, review_text);
+  // data.addReview(restaurant_id, review_stars, review_title, review_text);
 
   res.status(200).redirect(`/${restaurant_id}`);
 })
