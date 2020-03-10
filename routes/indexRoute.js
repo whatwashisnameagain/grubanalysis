@@ -1,8 +1,8 @@
 var express = require('express'),
   router = express.Router(),
+  usersModel = require('../models/usersModel'),
   data = require('../models/dataModel');
 
-  
 
 /* GET home page. */
 router.get('/', async (req, res) => {
@@ -53,7 +53,7 @@ reviewData = await data.getAllReviews(id);
 router.post('/', (req,res) => {
   const { restaurant_id, review_title, review_stars,review_text} = req.body;
 
-
+  
 
   console.log(req.body)
 
