@@ -3,6 +3,7 @@
         <div class="restaurant-header">
             ${idData.map(restaurant => {
                 return `
+                    <p>${restaurant.name}</p>
                     <p>Food Type: ${restaurant.category}</p>
                 `
             }).join('')}
@@ -33,16 +34,15 @@
         </div>
 
             ${reviewData.map(review => {
-                return `
-                <div class='review-list-wrapper'>
+                return (
+                `<div class='review-list-wrapper'>
                     <div class="review-list">
                         <h3>${review.title}</h3>
                         <h5>${review.name} <span>${review.karma}</span></h5>
                         <p>${review.review}</p>
                     </div>
-                </div>
-                `
-            })}
+                </div>`)
+            }).join('')}
             <a href="/"><p class="form-tagline">Return home</p></a>
     </div>
 </div>

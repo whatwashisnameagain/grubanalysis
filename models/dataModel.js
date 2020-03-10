@@ -54,9 +54,9 @@ class DataModel {
         }
     }
 
-    static async addReview(u_id, r_id, stars, title, text) {
+    static async addReview(r_id, stars, title, text) {
         try {
-            const res = await db.one('INSERT INTO review (restaurant_id, stars, title, review) VALUES ($1, $2, $3, $4)',[d_id, stars, title, text])
+            const res = await db.one('INSERT INTO review (reviewer_id, restaurant_id, stars, title, review) VALUES ($1, $2, $3, $4, $5) RETURNING id',[1, r_id, stars, title, text])
             return res;
         } catch(err) {
             console.log(err);

@@ -51,7 +51,7 @@ nav a {
   font-size: 0.75em;
   text-transform: uppercase;
   padding: 20px 20px 0 10px;
-  border-radius: 5px;
+  border-radius: 2px;
 } nav a:hover {
   color: #fff;
   transition: 1s;
@@ -75,7 +75,7 @@ nav a {
 }
 
 .main-page p {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   cursor: pointer;
   margin: 10px;
@@ -101,7 +101,7 @@ nav a {
   flex-direction: column;
   align-items: center;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 2px;
   width: 80%;
 }
 
@@ -111,9 +111,9 @@ nav a {
 }
 
 .restaurant-header {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 217, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 2px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -131,7 +131,7 @@ nav a {
 .review-form-wrapper {
   border: 1px solid rgba(255, 217, 0, 0.5);
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 2px;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -142,7 +142,7 @@ nav a {
   height: 30px;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  border-radius: 2px;
   border: none;
   padding: 0 10px;
   margin: 0 20px;
@@ -152,10 +152,10 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .review-title select {
@@ -163,7 +163,7 @@ nav a {
   border: none;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  border-radius: 2px;
   height: 30px;
   width: 45px;
   color: gold;
@@ -175,15 +175,15 @@ nav a {
   display:flex;
   align-items: center;
   justify-content: center;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.9);
 }.review-body textarea {
   width: 90%;
   height: 100px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   outline: none;
   padding: 20px;
   margin-top: 5px;
@@ -196,13 +196,13 @@ nav a {
   display:flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 217, 0, 0.5);
   width: 100%;
   margin-bottom: 10px;
 } .review-list {
-  margin: 10px 0;
+  margin: 20px 0;
   width: 90%;
 }.review-list h3 {
   padding: 0;
@@ -222,10 +222,10 @@ nav a {
 }
 
 .form-page {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 217, 0, 0.5);
   display: flex;
-  border-radius: 5px;
+  border-radius: 2px;
   flex-direction: column;
   color: red;
   align-items: center;
@@ -264,7 +264,7 @@ nav a {
   outline: none;
   border: none;
   padding: 20px 40px;
-  border-radius: 5px;
+  border-radius: 2px;
   color: #222;
   text-transform: uppercase;
   font-size: 0.5em;
