@@ -36,7 +36,7 @@ class User {
     //instance method
     async login() {
         try {
-            const response = await db.one(`SELECT id, first_name, last_name, password FROM users WHERE email=$1`, [this.email]);
+            const response = await db.one(`SELECT id, first_name, last_name, password FROM users WHERE email=$1;`, [this.email]);
 
             const isValid = this.checkPassword(response.password);
 
@@ -48,7 +48,7 @@ class User {
             }
         } catch (error) {
             console.log('error :', error);
-            return 
+            return error
         }
     }
 };

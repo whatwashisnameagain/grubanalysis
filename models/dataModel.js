@@ -36,15 +36,15 @@ class DataModel {
         try {
             const res = await db.any(`
             SELECT 
-            review.title, 
-            review.review, 
-            reviewer.name, 
-            reviewer.karma 
+            review.title,
+            review.stars,
+            review.review,
+            users.first_name
             FROM review 
             INNER JOIN 
-            reviewer 
+            users
             ON 
-            review.reviewer_id = reviewer.id
+            review.reviewer_id = users.id
             WHERE
             restaurant_id=${d_id};
             `);
@@ -54,15 +54,15 @@ class DataModel {
         }
     }
 
-    static async addReview(r_id, stars, title, text) {
+    static async addReview(user_id, rest_id, stars, title, text) {
         try {
-            const res = await db.one('INSERT INTO review (reviewer_id, restaurant_id, stars, title, review) VALUES ($1, $2, $3, $4, $5) RETURNING id',[1, r_id, stars, title, text])
+            const res = await db.one('INSERT INTO review (reviewer_id, restaurant_id, stars, title, review) VALUES ($1, $2, $3, $4, $5) RETURNING id',[user_id, rest_id, stars, title, text])
             return res;
         } catch(err) {
             console.log(err);
             return err;
         }
     }
-}
+};
 
 module.exports = DataModel;

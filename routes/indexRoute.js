@@ -1,6 +1,5 @@
 var express = require('express'),
   router = express.Router(),
-  usersModel = require('../models/usersModel'),
   data = require('../models/dataModel');
 
 
@@ -55,11 +54,7 @@ router.post('/', (req,res) => {
 
   const { user_id } = req.session;
 
-  console.log('USER ID IS ME', user_id);
-
-  console.log(req.body)
-
-  // data.addReview(restaurant_id, review_stars, review_title, review_text);
+  data.addReview(user_id, restaurant_id, review_stars, review_title, review_text);
 
   res.status(200).redirect(`/${restaurant_id}`);
 })

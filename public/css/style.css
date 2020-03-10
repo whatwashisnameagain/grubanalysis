@@ -69,15 +69,16 @@ nav a {
 
 /* Main Page Styles */
 .main-page {
-  flex-direction: column;x
+  flex-direction: column;
+  width: 100%;
 }
 
 .main-page p {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   cursor: pointer;
-  margin: 10px;
-  width: 500px;
+  margin: 10px auto;
+  width: 80%;
   font-size: 1.2em;
   text-align: center;
   opacity: 0.8;
@@ -91,6 +92,8 @@ nav a {
   transform: scale(0.99);
   transition: 0.5s;
 }
+
+
 
 /* Restaurant Page Styles*/
 .restaurant-container {
