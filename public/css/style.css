@@ -161,7 +161,6 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
   padding: 20px 0;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -187,7 +186,6 @@ nav a {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
 }.review-body textarea {
   width: 90%;
   height: 100px;
